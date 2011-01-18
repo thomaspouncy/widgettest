@@ -1,14 +1,9 @@
-<div id="fb-root"></div>
-<script src="http://connect.facebook.net/en_US/all.js"></script>
 <script>
-  FB.init({
-	appId  : '<%= Facebooker2.app_id %>',
-	status : true, // check login status
-	cookie : true, // enable cookies to allow the server to access the session
-	xfbml  : true  // parse XFBML
-  });
+  function updateIFrame(){
+  	  jQuery("#sat_widget_iframe").attr("src","http://www.shareandtelldev.com:3000/widget/index");
+  }
 </script>
-
-<iframe class="sat_widget_iframe" src="http://www.shareandtelldev.com:3000/widget/index" scrolling="no">
+<div onclick="updateIFrame()" style="width: 150px; height: 50px; background-color: #00F;">Click me!</div>
+<iframe id="sat_widget_iframe" src="" scrolling="no">
 	<p>Your browser does not support iframes.</p>
 </iframe>
