@@ -14,7 +14,7 @@ here is some sample text!<br/>
 			s.type = 'text/javascript';
 			s.async = true;
 			s.id = 'shareandtell_embedded_script_'+btn_id
-			s.src = 'http://<%= request.host_with_port %>/widget/shareandtell_inpage.js?app_id='+app_id+'&buster='+Math.floor(Math.random()*10000000)+'&btn_id='+btn_id;
+			s.src = 'http://www.shareandtelltest.com/widget/shareandtell_inpage.js?app_id='+app_id+'&buster='+Math.floor(Math.random()*10000000)+'&btn_id='+btn_id;
 			var x = document.getElementsByTagName('body')[0].appendChild(s);
 			}
 			if (window.attachEvent)
