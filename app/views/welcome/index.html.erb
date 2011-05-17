@@ -21,7 +21,7 @@
                 end
                 %>/widget/shareandtell_widget.js?app_id='+app_id+'&buster='+Math.floor(Math.random()*10000000)+'&btn_id='+btn_id+'&color='+color+'&style='+widget_style+'&async=true&offset='+offset;
                 var x = document.getElementsByTagName('body')[0].appendChild(s);
-            );
+            })();
         </script>
 <% else %>
         <% if params[:server] == "local" %>
