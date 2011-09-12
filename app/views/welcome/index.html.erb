@@ -3,15 +3,11 @@
   <% if params[:async] == "true" %>
           <script type="text/javascript">
               (function() {
-                  var widget_style = 'side';
-                  var app_id = 185;
-                  var btn_id = 1;
-                  var color = 1;
-                  var offset = 0;
+                  var config_id = 185;
                   var s = document.createElement('script');
                   s.type = 'text/javascript';
                   s.async = true;
-                  s.id = 'shareandtell_script_'+btn_id;
+                  s.id = 'shareandtell_script_1';
                   s.src = 'http://<%=
                   case params[:server]
                   when "local"
@@ -27,11 +23,11 @@
           </script>
   <% else %>
           <% if params[:server] == "local" %>
-                  <script type="text/javascript" src="http://www.shareandtelldev.com:3000/widget/shareandtell_widget.js?app_id=185&btn_id=1&color=2<%= "&display_all=#{params[:display_all]}" unless params[:display_all].nil? %>" id="shareandtell_script_1"></script>
+                  <script type="text/javascript" src="http://widget.shareandtelldev.com:3000/widget/shareandtell_widget.js?config_id=185<%= "&display_all=#{params[:display_all]}" unless params[:display_all].nil? %>" id="shareandtell_script_1"></script>
           <% elsif params[:server] == "live" %>
-                  <script type="text/javascript" src="http://www.shareandtell.com/widget/shareandtell_widget.js?app_id=185&btn_id=1&color=2<%= "&display_all=#{params[:display_all]}" unless params[:display_all].nil? %>" id="shareandtell_script_1"></script>
+                  <script type="text/javascript" src="http://widget.shareandtell.com/widget/shareandtell_widget.js?config_id=185<%= "&display_all=#{params[:display_all]}" unless params[:display_all].nil? %>" id="shareandtell_script_1"></script>
           <% else %>
-                  <script type="text/javascript" src="http://www.shareandtelltest.com/widget/shareandtell_widget.js?app_id=185&btn_id=1&color=2<%= "&display_all=#{params[:display_all]}" unless params[:display_all].nil? %>" id="shareandtell_script_1"></script>
+                  <script type="text/javascript" src="http://widget.shareandtelltest.com/widget/shareandtell_widget.js?config_id=185<%= "&display_all=#{params[:display_all]}" unless params[:display_all].nil? %>" id="shareandtell_script_1"></script>
           <% end %>
   <% end %>
 </div>
