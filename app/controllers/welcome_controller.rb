@@ -4,12 +4,17 @@ class WelcomeController < ApplicationController
 
 
   def api_test
-    key = "39zuq9yiok6iaqek7b7zhy2vk"
-    secret = "79w7aplwms7xezs1lix4bnnxo"
+    key = "e2bvnr4l7x0ys12kwyg8w0bzv"
+    secret = "cqn35gz5smi2kf50af2zeecim"
+    site = "http://api.shareandtelltest.com"
+    token_url_path = "/v1/rest_api/oauth/access_token"
+    token_url = "#{site}#{token_url_path}"
+    client = OAuth2::Client.new(key, secret, :site => site, :token_url => token_url)
 
-    client = OAuth2::Client.new(key, secret)
+    token = client.get_token({'client_id' => client.id, 'client_secret' => client.secret, 'grant_type' => 'client_credentials'})
 
-    render :text => client
-
+    response = token.get('/v1/rest_api/account/valid_token')
+    puts response.body
+    render :text => response.body
   end
 end
