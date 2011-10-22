@@ -24,7 +24,7 @@ Some text for loading purposes
                   "www.shareandtelldev.com:3000"
                   when "live"
                   "www.shareandtell.com"
-                  default
+                  else
                   "www.shareandtelltest.com"
                   end
                   %>/widget/shareandtell_widget.js?config_id='+config_id<%= "+'&display_all=#{params[:display_all]}'" unless params[:display_all].nil? %>;
