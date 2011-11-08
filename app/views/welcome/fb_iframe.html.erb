@@ -12,7 +12,7 @@
                 proxyForm.setAttribute("target", "fb_test_frame");
                 var input = document.getElementById("signed_request");
                 //input.setAttribute("value", signedRequest);
-                proxyForm.submit();
+                //proxyForm.submit();
         }
 
         var base_url = '<%=
@@ -26,7 +26,7 @@
                   end
                   %>';
 
-        //submitForm("http://"+base_url+"/widget/fb_tab_widget?config_id=<%= params[:config_id]||185 %>", "test_param");
+        submitForm("http://"+base_url+"/widget/fb_tab_widget?config_id=<%= params[:config_id]||185 %>", "test_param");
 </script>
 <noscript>
         <div class="pam uiBoxGray">Necesitas tener Javascript activado en tu navegador para usar las Aplicaciones de Facebook.</div>
