@@ -1,0 +1,28 @@
+<form method="post" id="proxy_form"><input type="hidden" autocomplete="off" id="signed_request" name="signed_request" /></form>
+<script>
+        document.domain = "widgettest.heroku.com";
+        function submitForm(appTabUrl, signedRequest) {
+                var proxyForm = document.getElementById("proxy_form");
+                proxyForm.setAttribute("action", appTabUrl);
+                proxyForm.setAttribute("target", "fb_test_frame");
+                var input = document.getElementById("signed_request");
+                input.setAttribute("value", signedRequest);
+                proxyForm.submit();
+        }
+
+        var base_url = <%=
+                  case params[:server]
+                  when "local"
+                  "www.shareandtelldev.com:3000"
+                  when "live"
+                  "www.shareandtell.com"
+                  else
+                  "www.shareandtelltest.com"
+                  end
+                  %>;
+
+        submitForm("http://"+base_url+"/widget/fb_tab_widget.js?config_id=<%= params[:config_id]||185 %>", "test_param");
+</script>
+<noscript>
+        <div class="pam uiBoxGray">Necesitas tener Javascript activado en tu navegador para usar las Aplicaciones de Facebook.</div>
+</noscript>
