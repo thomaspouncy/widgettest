@@ -1,4 +1,8 @@
-<form method="post" id="proxy_form"><input type="hidden" autocomplete="off" id="signed_request" name="signed_request" /></form>
+<form method="post" id="proxy_form">
+<!--
+<input type="hidden" autocomplete="off" id="signed_request" name="signed_request" />
+!-->
+</form>
 <script>
         document.domain = "widgettest.heroku.com";
         function submitForm(appTabUrl, signedRequest) {
@@ -6,7 +10,7 @@
                 proxyForm.setAttribute("action", appTabUrl);
                 proxyForm.setAttribute("target", "fb_test_frame");
                 var input = document.getElementById("signed_request");
-                input.setAttribute("value", signedRequest);
+                //input.setAttribute("value", signedRequest);
                 proxyForm.submit();
         }
 
