@@ -2,6 +2,7 @@
 <!--
 <input type="hidden" autocomplete="off" id="signed_request" name="signed_request" />
 !-->
+<input type="submit">Submit</input>
 </form>
 <script>
         document.domain = "widgettest.heroku.com";
@@ -25,7 +26,7 @@
                   end
                   %>';
 
-        submitForm("http://"+base_url+"/widget/fb_tab_widget?config_id=<%= params[:config_id]||185 %>", "test_param");
+        //submitForm("http://"+base_url+"/widget/fb_tab_widget?config_id=<%= params[:config_id]||185 %>", "test_param");
 </script>
 <noscript>
         <div class="pam uiBoxGray">Necesitas tener Javascript activado en tu navegador para usar las Aplicaciones de Facebook.</div>
