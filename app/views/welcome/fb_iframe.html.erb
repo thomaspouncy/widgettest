@@ -10,7 +10,7 @@
                 proxyForm.submit();
         }
 
-        var base_url = <%=
+        var base_url = '<%=
                   case params[:server]
                   when "local"
                   "www.shareandtelldev.com:3000"
@@ -19,7 +19,7 @@
                   else
                   "www.shareandtelltest.com"
                   end
-                  %>;
+                  %>';
 
         submitForm("http://"+base_url+"/widget/fb_tab_widget.js?config_id=<%= params[:config_id]||185 %>", "test_param");
 </script>
