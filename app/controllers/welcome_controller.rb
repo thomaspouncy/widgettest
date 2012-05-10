@@ -2,6 +2,9 @@ class WelcomeController < ApplicationController
   require 'oauth2'
   layout "application"
 
+  def redirect_test
+    redirect_to "http://www.shareandtelldev.com:3000/home/test_icon" and return
+  end
 
   def api_test
     key = "e2bvnr4l7x0ys12kwyg8w0bzv"
