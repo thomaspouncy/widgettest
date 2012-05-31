@@ -2,49 +2,13 @@ here is some sample text!<br/>
 <div style="float:left;">we loves the floating div</div>
 
 <% if params[:server] == "local" %>
-        <script type="text/javascript" src="http://www.shareandtelldev.com:3000/widget/shareandtell_widget.js?config_id=185"></script>
+        <script type="text/javascript" src="http://www.shareandtelldev.com:3000/widget/shareandtell_widget.js?config_id=<%= params[:config_id]||185 %>"></script>
 <% elsif params[:server] == "prod" %>
-        <script type="text/javascript">
-                (function() {
-                        function shareandtell_embedded_load(){
-                        var app_id = 185;
-                        var btn_id = 1;
-
-                        var s = document.createElement('script');
-                        s.type = 'text/javascript';
-                        s.async = true;
-                        s.id = 'shareandtell_embedded_script_'+btn_id
-                        s.src = 'http://www.shareandtell.com/widget/shareandtell_inpage.js?app_id='+app_id+'&buster='+Math.floor(Math.random()*10000000)+'&btn_id='+btn_id;
-                        var x = document.getElementsByTagName('body')[0].appendChild(s);
-                        }
-                        if (window.attachEvent)
-                        window.attachEvent('onload', shareandtell_embedded_load);
-                        else
-                        window.addEventListener('load', shareandtell_embedded_load, false);
-                })();
-        </script>
+        <script type="text/javascript" src="http://www.shareandtell.com/widget/shareandtell_widget.js?config_id=<%= params[:config_id]||185 %>"></script>
 <% else %>
-        <script type="text/javascript">
-                (function() {
-                        function shareandtell_embedded_load(){
-                        var app_id = 185;
-                        var btn_id = 1;
-
-                        var s = document.createElement('script');
-                        s.type = 'text/javascript';
-                        s.async = true;
-                        s.id = 'shareandtell_embedded_script_'+btn_id
-                        s.src = 'http://www.shareandtelltest.com/widget/shareandtell_inpage.js?app_id='+app_id+'&buster='+Math.floor(Math.random()*10000000)+'&btn_id='+btn_id;
-                        var x = document.getElementsByTagName('body')[0].appendChild(s);
-                        }
-                        if (window.attachEvent)
-                        window.attachEvent('onload', shareandtell_embedded_load);
-                        else
-                        window.addEventListener('load', shareandtell_embedded_load, false);
-                })();
-        </script>
+        <script type="text/javascript" src="http://www.shareandtelltest.com/widget/shareandtell_widget.js?config_id=<%= params[:config_id]||185 %>"></script>
 <% end %>
-<div onclick="shareandtell_embedded_click_185()">BUTTTTTTTTONNNNNN</div>
+<div onclick="shareandtell_embedded_click_<%= params[:config_id]||185 %>()">BUTTTTTTTTONNNNNN</div>
 
 <div>no one loves the normal div. it is all alone</div>
 
