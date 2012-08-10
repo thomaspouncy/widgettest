@@ -21,11 +21,11 @@ Some text for loading purposes
                   s.src = 'http://<%=
                   case params[:server]
                   when "local"
-                  "www.shareandtelldev.com:3000"
+                  "widget.getsmartifydev.com:3000"
                   when "live"
-                  "www.shareandtell.com"
+                  "widget.getsmartify.com"
                   else
-                  "www.shareandtelltest.com"
+                  "widget.getsmartifystaging.com"
                   end
                   %>/widget/shareandtell_widget.js?config_id='+config_id<%= "+'&display_all=#{params[:display_all]}'" unless params[:display_all].nil? %>;
                   var x = document.getElementsByTagName('body')[0].appendChild(s);
@@ -33,11 +33,11 @@ Some text for loading purposes
           </script>
   <% else %>
           <% if params[:server] == "local" %>
-                  <script type="text/javascript" src="http://widget.shareandtelldev.com:3000/widget/shareandtell_widget.js?config_id=<%= params[:config_id]||185 %><%= "&display_all=#{params[:display_all]}" unless params[:display_all].nil? %>" id="shareandtell_script_1"></script>
+                  <script type="text/javascript" src="http://widget.getsmartifydev.com:3000/widget/shareandtell_widget.js?config_id=<%= params[:config_id]||185 %><%= "&display_all=#{params[:display_all]}" unless params[:display_all].nil? %>" id="shareandtell_script_1"></script>
           <% elsif params[:server] == "live" %>
-                  <script type="text/javascript" src="http://widget.shareandtell.com/widget/shareandtell_widget.js?config_id=<%= params[:config_id]||185 %><%= "&display_all=#{params[:display_all]}" unless params[:display_all].nil? %>" id="shareandtell_script_1"></script>
+                  <script type="text/javascript" src="http://widget.getsmartify.com/widget/shareandtell_widget.js?config_id=<%= params[:config_id]||185 %><%= "&display_all=#{params[:display_all]}" unless params[:display_all].nil? %>" id="shareandtell_script_1"></script>
           <% else %>
-                  <script type="text/javascript" src="http://widget.shareandtelltest.com/widget/shareandtell_widget.js?config_id=<%= params[:config_id]||185 %><%= "&display_all=#{params[:display_all]}" unless params[:display_all].nil? %>" id="shareandtell_script_1"></script>
+                  <script type="text/javascript" src="http://widget.getsmartifystaging.com/widget/shareandtell_widget.js?config_id=<%= params[:config_id]||185 %><%= "&display_all=#{params[:display_all]}" unless params[:display_all].nil? %>" id="shareandtell_script_1"></script>
           <% end %>
   <% end %>
 </div>

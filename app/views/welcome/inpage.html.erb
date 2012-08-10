@@ -2,11 +2,11 @@ here is some sample text!<br/>
 <div style="float:left;">we loves the floating div</div>
 
 <% if params[:server] == "local" %>
-        <script type="text/javascript" src="http://www.shareandtelldev.com:3000/widget/shareandtell_widget.js?config_id=<%= params[:config_id]||185 %>"></script>
+        <script type="text/javascript" src="http://widget.getsmartifydev.com:3000/widget/shareandtell_widget.js?config_id=<%= params[:config_id]||185 %>"></script>
 <% elsif params[:server] == "prod" %>
-        <script type="text/javascript" src="http://www.shareandtell.com/widget/shareandtell_widget.js?config_id=<%= params[:config_id]||185 %>"></script>
+        <script type="text/javascript" src="http://widget.getsmartify.com/widget/shareandtell_widget.js?config_id=<%= params[:config_id]||185 %>"></script>
 <% else %>
-        <script type="text/javascript" src="http://www.shareandtelltest.com/widget/shareandtell_widget.js?config_id=<%= params[:config_id]||185 %>"></script>
+        <script type="text/javascript" src="http://widget.getsmartifystaging.com/widget/shareandtell_widget.js?config_id=<%= params[:config_id]||185 %>"></script>
 <% end %>
 <div onclick="shareandtell_embedded_click_<%= params[:config_id]||185 %>()">BUTTTTTTTTONNNNNN</div>
 
