@@ -1,0 +1,7 @@
+<% if params[:server] == "local" %>
+  <iframe src="http://widget.getsmartifydev.com:3000/widget/iframe?config_id=<%= params[:config_id] %>" style="width: 810px; height: 1200px; border: 0px;"/>
+<% elsif params[:server] == "prod" %>
+  <iframe src="http://widget.getsmartify.com/widget/iframe?config_id=<%= params[:config_id] %>" style="width: 810px; height: 1200px; border: 0px;"/>
+<% else %>
+  <iframe src="http://widget.getsmartifystaging.com/widget/iframe?config_id=<%= params[:config_id] %>" style="width: 810px; height: 1200px; border: 0px;"/>
+<% end %>
