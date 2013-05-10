@@ -20,4 +20,8 @@ class WelcomeController < ApplicationController
     puts response.body
     render :text => response.body
   end
+
+  def mobile_test
+    render :layout=>false
+  end
 end
