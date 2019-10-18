@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.3'
+gem 'rails', '3.2.17'
 #gem 'mysql2'
 gem 'oauth2', '0.5.0'
 #gem 'newrelic_rpm'
